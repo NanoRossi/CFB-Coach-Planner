@@ -1,0 +1,81 @@
+.punch-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .punch-card {
+    background: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+  
+  .punch-card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .punch-card-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .tree-name {
+    width: 150px;
+    font-weight: bold;
+  }
+  
+  .dots {
+    display: flex;
+    gap: 3px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    border: 1px solid black;
+  }
+  
+  .dot.filled {
+    background: black;
+  }
+  
+  .export-button {
+    padding: 8px 12px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .export-button:hover {
+    background: gray;
+  }
+
+  .tree-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tree-column {
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.column-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

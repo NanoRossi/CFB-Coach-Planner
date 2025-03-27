@@ -1,0 +1,200 @@
+/* CoachSkillTree.css */
+
+/* Tree container style */
+.tree-container {
+  border-radius: 30px;
+  border-color: black;
+  border: 5px solid black; /* Add a black border with a 2px width */
+  padding: 10px;
+  transition: all 0.3s ease-in-out; /* Smooth expansion */
+  overflow: hidden; /* Hide content overflow */
+  grid-column: span 1; /* Default to 1 column */
+}
+
+/* When the tree is collapsed */
+.tree-container.collapsed {
+  grid-column: span 1; /* Spans across 4 columns */
+  padding: 20px; /* Increase padding */
+  z-index: 1; /* Make collapsed container more prominent */
+}
+
+/* When the tree is expanded */
+.tree-container.expanded {
+  grid-column: span 4; /* Spans across 1 column */
+  padding: 10px; /* Reset padding */
+  z-index: 10; /* Lower z-index to make other elements above */
+}
+
+.tree-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  gap: 10px; /* Space between items */
+}
+/* Category grid inside each tree */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.category {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4; /* Neutral background for categories */
+}
+
+/* Button styles inside skills */
+.skill {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-skill-button {
+  background-color: green;
+  color: white;
+}
+
+.remove-skill-button {
+  background-color: red;
+  color: white;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Progress bar for skills */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Chart container positioning and styling */
+.chart-container {
+  position: absolute; /* Position relative to the page container */
+  top: 20px;          /* Adjust the space from the top */
+  right: 20px;        /* Adjust the space from the right */
+  width: 100%;        /* Full width of the chart container */
+  max-width: 400px;   /* Set a max-width to ensure responsiveness */
+  height: 200px;      /* Adjust height based on content */
+  padding: 5px;
+  background-color: #ADD8E6;  /* Light blue background */
+  border-radius: 10px; /* Optional rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  z-index: 10;        /* Ensure chart stays on top of other content */
+}
+
+.chart-container canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Header section styles */
+.header {
+  display: flex;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.skill-points {
+  width: 250px;
+  padding: 10px;
+  background-color: #f0f0f0; /* Light background */
+  border: 2px solid #2c5364; /* Border for the entire text box */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* Text color */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  outline: none; /* Remove default focus outline */
+}
+
+.skill-points:focus {
+  border-color: #FFCC00; /* Yellow border on focus */
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5); /* Optional glow effect */
+}
+
+/* Add an inner border around the text box */
+.skill-points {
+  position: relative;
+}
+
+.skill-points::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  border: 1px solid #2c5364; /* Inner border around the text */
+  border-radius: 6px; /* Slightly rounded corners for the inner border */
+  pointer-events: none; /* Ensure the inner border doesn't block interactions */
+}
+
+/* Starting tree select box styles */
+.starting-tree {
+  width: 230px;
+  padding: 10px;
+  background-color: #f0f0f0; /* Light background */
+  border: 2px solid #2c5364; /* Border for the entire select box */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* Text color */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  appearance: none; /* Remove default styling for better customization */
+  -webkit-appearance: none; /* For Webkit browsers (Chrome, Safari) */
+  -moz-appearance: none; /* For Firefox */
+  background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 10 5%22%3E%3Cpolygon points=%220,0 10,0 5,5%22 fill=%23B4B4B4%22/%3E%3C/svg%3E'); /* Custom down arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position arrow to the right */
+  background-size: 12px; /* Size of the arrow */
+  padding-right: 30px; /* Space for the arrow */
+}
+
+.starting-tree:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #FFCC00; /* Yellow border on focus */
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5); /* Optional glow effect */
+}
+
+/* Add an inner border around the text box */
+.starting-tree {
+  position: relative;
+}
+
+.starting-tree::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  border: 1px solid #2c5364; /* Inner border around the text */
+  border-radius: 6px; /* Slightly rounded corners for the inner border */
+  pointer-events: none; /* Ensure the inner border doesn't block interactions */
+}
