@@ -1,3 +1,11 @@
+## What is this?
+
+A tool built for played of EA Sports College Football to 25 to plan out how they intend to build their coaches. 
+
+Driven by the skills.json file to determine costs and requirements for each skill tree, this is customisable for future/other games. 
+
+Also a way for me to practice and learn react
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -13,9 +21,4 @@ You may also see any lint errors in the console.
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Note: I have not and do not intend to actually deploy this anywhere
