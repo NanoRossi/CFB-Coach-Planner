@@ -1,6 +1,6 @@
 ## What is this?
 
-A tool built for played of EA Sports College Football to 25 to plan out how they intend to build their coaches. 
+A tool built for players of EA Sports College Football 25 to plan out how they intend to build their coaches. 
 
 Driven by the skills.json file to determine costs and requirements for each skill tree, this is customisable for future/other games. 
 
